@@ -13,6 +13,11 @@
 		133829ED24ECE1D900FCEC94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133829EB24ECE1D900FCEC94 /* Main.storyboard */; };
 		133829EF24ECE1E000FCEC94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 133829EE24ECE1E000FCEC94 /* Assets.xcassets */; };
 		133829F224ECE1E000FCEC94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 133829F024ECE1E000FCEC94 /* LaunchScreen.storyboard */; };
+		133829FE24EE19FB00FCEC94 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 133829FD24EE19FB00FCEC94 /* Location.swift */; };
+		13382A0324EE26E300FCEC94 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13382A0224EE26E300FCEC94 /* LocationService.swift */; };
+		13382A0524EE292100FCEC94 /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 13382A0424EE292100FCEC94 /* locations.json */; };
+		13382A0724EE2A7500FCEC94 /* RideQuote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13382A0624EE2A7500FCEC94 /* RideQuote.swift */; };
+		13382A0924EE2B2100FCEC94 /* RideQuoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13382A0824EE2B2100FCEC94 /* RideQuoteService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		133829EE24ECE1E000FCEC94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		133829F124ECE1E000FCEC94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		133829F324ECE1E000FCEC94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		133829FD24EE19FB00FCEC94 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		13382A0224EE26E300FCEC94 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		13382A0424EE292100FCEC94 /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		13382A0624EE2A7500FCEC94 /* RideQuote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideQuote.swift; sourceTree = "<group>"; };
+		13382A0824EE2B2100FCEC94 /* RideQuoteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideQuoteService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,60 @@
 		133829E424ECE1D900FCEC94 /* Lyft */ = {
 			isa = PBXGroup;
 			children = (
-				133829E524ECE1D900FCEC94 /* AppDelegate.swift */,
-				133829E724ECE1D900FCEC94 /* SceneDelegate.swift */,
-				133829E924ECE1D900FCEC94 /* ViewController.swift */,
-				133829EB24ECE1D900FCEC94 /* Main.storyboard */,
+				133829FC24EE19C800FCEC94 /* Support File */,
+				133829FB24EE19C200FCEC94 /* Controller */,
+				133829FA24EE19BA00FCEC94 /* View */,
+				133829F924EE19B500FCEC94 /* Model */,
 				133829EE24ECE1E000FCEC94 /* Assets.xcassets */,
-				133829F024ECE1E000FCEC94 /* LaunchScreen.storyboard */,
 				133829F324ECE1E000FCEC94 /* Info.plist */,
 			);
 			path = Lyft;
+			sourceTree = "<group>";
+		};
+		133829F924EE19B500FCEC94 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13382A0124EE26CC00FCEC94 /* Service */,
+				133829FD24EE19FB00FCEC94 /* Location.swift */,
+				13382A0624EE2A7500FCEC94 /* RideQuote.swift */,
+				13382A0824EE2B2100FCEC94 /* RideQuoteService.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		133829FA24EE19BA00FCEC94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				133829EB24ECE1D900FCEC94 /* Main.storyboard */,
+				133829F024ECE1E000FCEC94 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		133829FB24EE19C200FCEC94 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				133829E924ECE1D900FCEC94 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		133829FC24EE19C800FCEC94 /* Support File */ = {
+			isa = PBXGroup;
+			children = (
+				13382A0424EE292100FCEC94 /* locations.json */,
+				133829E524ECE1D900FCEC94 /* AppDelegate.swift */,
+				133829E724ECE1D900FCEC94 /* SceneDelegate.swift */,
+			);
+			path = "Support File";
+			sourceTree = "<group>";
+		};
+		13382A0124EE26CC00FCEC94 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				13382A0224EE26E300FCEC94 /* LocationService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +182,7 @@
 			files = (
 				133829F224ECE1E000FCEC94 /* LaunchScreen.storyboard in Resources */,
 				133829EF24ECE1E000FCEC94 /* Assets.xcassets in Resources */,
+				13382A0524EE292100FCEC94 /* locations.json in Resources */,
 				133829ED24ECE1D900FCEC94 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +196,10 @@
 			files = (
 				133829EA24ECE1D900FCEC94 /* ViewController.swift in Sources */,
 				133829E624ECE1D900FCEC94 /* AppDelegate.swift in Sources */,
+				13382A0924EE2B2100FCEC94 /* RideQuoteService.swift in Sources */,
+				13382A0324EE26E300FCEC94 /* LocationService.swift in Sources */,
+				133829FE24EE19FB00FCEC94 /* Location.swift in Sources */,
+				13382A0724EE2A7500FCEC94 /* RideQuote.swift in Sources */,
 				133829E824ECE1D900FCEC94 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
